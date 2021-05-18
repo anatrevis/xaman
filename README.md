@@ -7,10 +7,10 @@ Xaman was developed in Python using Chatterbot, a machine-learning-based library
 
 
 # Requirements: 
-python 3.8.0 
-chatterbot 1.0.1 
-pip install Flask 
-pip install pyowm
+- python 3.8.0 
+- chatterbot 1.0.1 
+- pip install Flask 
+- pip install pyowm
 
 *note: you can install Anaconda to create a virtual env with Python 3.8.0 and all the requirements. Refer to Option 2 on How to run.
 
