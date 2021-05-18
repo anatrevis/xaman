@@ -1,9 +1,9 @@
 # Introduction:
-Xaman is a chatbot that was developed in the context of a group project in the Software Development 2 (SD2) module of the second year of Computer Science Bachelors Honors Part-Time course at Griffith College Dublin. The bot’s name was inspired by the mystical councilors of ancient Asian tribes, called “Shamans”.
+Xaman is a chatbot developed in the context of a project in the Software Development 2 module of the second year of the Computer Science Bachelors Honors Part-Time course at Griffith College Dublin. The bot's name was inspired by the mystical councilors of ancient Asian tribes, called "Shamans".
 
-Shamans were thought to have a special connection with spirits and the Mother Nature, making it possible for them to discover the cause of illness,  bad luck,  predict the weather and even the future. Xaman still doesn’t have all of such talents. But, it can predict the weather for any destination in the world within five days with precision and advise appropriate clothes for wearing on the trip to this place.
+Shamans were thought to have a special connection with spirits and the Mother Nature, making it possible for them to discover the cause of illness,  bad luck,  predict the weather, and even the future. Xaman still doesn't have all of such talents. But, it can predict the weather for any destination in the world within five days with precision and advise appropriate clothes for wearing on the trip to this place.
 
-Xaman was developed in Python using Chatterbot, a machine-learning-based library that structures the “brain” of our bot artificial intelligence. 
+Xaman was developed in Python using Chatterbot, a machine-learning-based library that structures the "brain" of the bot's artificial intelligence. 
 
 
 # Requirements: 
@@ -30,4 +30,4 @@ Then, run normally:
 4) run application: python application.py
 5) run tests: python test_chatbot.py -v
 
-*note: change the path at the end of .yml file
+*note: change the path at the end of environment.yml file
