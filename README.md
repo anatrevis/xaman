@@ -1,5 +1,5 @@
 # Introduction:
-Xaman is a chatbot that was developed in the context of a group project in the Software Development 2 (SD2) module of the second year of Computer Science Bachelors Honors Part-Time course at Griffith College Dublin. The robot’s name was inspired by the mystical councilors of ancient Asian tribes, called “Shamans”.
+Xaman is a chatbot that was developed in the context of a group project in the Software Development 2 (SD2) module of the second year of Computer Science Bachelors Honors Part-Time course at Griffith College Dublin. The bot’s name was inspired by the mystical councilors of ancient Asian tribes, called “Shamans”.
 
 Shamans were thought to have a special connection with spirits and the Mother Nature, making it possible for them to discover the cause of illness,  bad luck,  predict the weather and even the future. Xaman still doesn’t have all of such talents. But, it can predict the weather for any destination in the world within five days with precision and advise appropriate clothes for wearing on the trip to this place.
 
