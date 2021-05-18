@@ -1,0 +1,35 @@
+name: environment
+channels:
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - ca-certificates=2021.4.13=h06a4308_1
+  - certifi=2020.12.5=py38h06a4308_0
+  - libedit=3.1.20210216=h27cfd23_1
+  - libffi=3.2.1=hf484d3e_1007
+  - libgcc-ng=9.1.0=hdf63c60_0
+  - libstdcxx-ng=9.1.0=hdf63c60_0
+  - ncurses=6.2=he6710b0_1
+  - openssl=1.1.1k=h27cfd23_0
+  - pip=21.0.1=py38h06a4308_0
+  - python=3.8.0=h0371630_2
+  - readline=7.0=h7b6447c_5
+  - setuptools=52.0.0=py38h06a4308_0
+  - sqlite=3.33.0=h62c20be_0
+  - tk=8.6.10=hbc83047_0
+  - wheel=0.36.2=pyhd3eb1b0_0
+  - xz=5.2.5=h7b6447c_0
+  - zlib=1.2.11=h7b6447c_3
+  - pip:
+    - chardet==4.0.0
+    - chatterbot==1.0.1
+    - chatterbot-corpus==1.2.0
+    - click==7.1.2
+    - idna==2.10
+    - markupsafe==1.1.1
+    - python-dateutil==2.7.5
+    - pytz==2021.1
+    - pyyaml==3.13
+    - requests==2.25.1
+    - urllib3==1.26.4
+prefix: /home/anatrevis/anaconda3/envs/environment
