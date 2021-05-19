@@ -4,7 +4,7 @@ from unittest.mock import MagicMock
 
 from chatbot import create_chatbot
 from conversation import Conversation
-from weather import is_location, wind_scale, get_forecast
+from weather import is_location, wind_scale
 from utils import extract_date, verify_date_range, is_date, \
     suggest_clothes, sensation
 
@@ -14,7 +14,7 @@ class TestChatBot(unittest.TestCase):
     def test_bot(self):
         bot = create_chatbot()
         response = 'Please provide the date of your next trip? The date must be within the next 5 days. Format: dd/mm/yyyy'
-        self.assertEqual(bot.get_response("Hi"), response)
+        self.assertEqual(bot.get_response("Hi").text, response)
 
     def test_wind_scale(self):
         test_cases = [
@@ -155,12 +155,17 @@ class TestChatBot(unittest.TestCase):
 
     def test_is_date(self):
         app = MagicMock()
+        today = datetime.date.today()
+        tomorrow = today + datetime.timedelta(days=1)
+        tomorrow = tomorrow.strftime('%d/%m/%Y');
+        print("tomorrow: "+tomorrow);
+
         test_cases = [
             ("I will travel on 05/09/2020", False),
             ("on 05/09/2021 and on 03/09/2021", False),
             ("2021/06/30", False),
-            ("13/05/2021", datetime.datetime.strptime('13/05/2021', "%d/%m/%Y")),
-            ("on 13/05/2021", datetime.datetime.strptime('13/05/2021', "%d/%m/%Y"))
+            (tomorrow, datetime.datetime.strptime(tomorrow, "%d/%m/%Y")),
+            ("on "+tomorrow, datetime.datetime.strptime(tomorrow, "%d/%m/%Y"))
         ]
         for option, answer in test_cases:
             self.assertEqual(is_date(option, app), answer)

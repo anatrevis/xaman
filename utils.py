@@ -9,8 +9,10 @@ def extract_date(input, app):
     :param app: flask app used for system logging
     :return: boolean that indicates if date is within range
     """
+    app.logger.info('input: ' + input)
     try:
-        to_find = re.findall('[0-9][1-9][/][0-9][1-9][/][1-2][0-9][0-9][0-9]', input)  # Search for a date pattern
+        to_find = re.findall('[0-9][0-9][/][0-1][1-9][/][1-2][0-9][0-9][0-9]', input)  # Search for a date pattern
+        app.logger.info('to_find: ' + str(len(to_find)))
         if len(to_find) > 1:
             app.logger.warning("Input contains more than one date.")
             return False
@@ -55,11 +57,13 @@ def is_date(input, app):
     :return: boolean that indicates if contains a valid date
     """
     try:
-        app.logger.warning("User imput date = " + input)
+        app.logger.warning("User input date = " + input)
         extracted_date = extract_date(input, app)  # First: try to extract a date from user input
-        if extracted_date is not None:
-            date = datetime.datetime.strptime(extracted_date, "%d/%m/%Y")  # Second: try to parse the extracted date in a datetime object - It will throw an exception if it is not valid
-            if verify_date_range(date, app):  # Third: verify if the date is withn the API range - Which is 5 days from today
+        if extracted_date:
+            date = datetime.datetime.strptime(extracted_date,
+                                              "%d/%m/%Y")  # Second: try to parse the extracted date in a datetime object - It will throw an exception if it is not valid
+            if verify_date_range(date,
+                                 app):  # Third: verify if the date is withn the API range - Which is 5 days from today
                 return date
             else:
                 return False

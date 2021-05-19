@@ -5,7 +5,7 @@ from chatterbot.trainers import ChatterBotCorpusTrainer, ListTrainer
 def create_chatbot():
     """Creates a ChatBot instance"""
     bot = ChatBot(
-        'Tripbot',
+        'Xaman',
         logic_adapters=[
             {
                 'import_path': 'chatterbot.logic.BestMatch',
@@ -21,7 +21,7 @@ def create_chatbot():
 
 def train_chatbot(bot):
     """Train the bot to respond to an user input."""
-    # bot.storage.drop()
+    bot.storage.drop()
 
     # List trainers will establish each item in the list as a possible response to it’s predecessor in the list.
     trainer1 = ListTrainer(bot)
@@ -63,7 +63,7 @@ def train_chatbot(bot):
     trainer3 = ListTrainer(bot)
     trainer3.train([
         'What is your name',
-        'My name is Bot'
+        'My name is Xaman'
     ])
 
     # Corpus trainer trains bot using data from the ChatterBot dialog corpus
